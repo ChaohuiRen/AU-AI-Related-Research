@@ -4,7 +4,7 @@
     margin-top:2rem;
     display: grid;
     grid-template-columns: repeat(18,1fr);
-    grid-template-rows: repeat(4,5vw) 1.5vw repeat(3,5vw) 1.5vw  3.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw repeat(3,5vw) 1.5vw repeat(4,5vw) 1.5vw;
+    grid-template-rows: repeat(4,5vw) 1.5vw repeat(3,5vw) 1.5vw  3.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw repeat(3,5vw) 1.5vw repeat(4,5vw) 1.5vw  3.5vw repeat(3,5vw) 1.5vw 3.5vw repeat(3,5vw) 1.5vw;
     &__gallery__item{
         &-1{
             grid-column: 1/4;
@@ -163,6 +163,14 @@
             grid-row:62/span 3;
             grid-column: 1/ span 3;
 
+        }
+        &-40{
+            grid-row:67/ span 3;
+            grid-column: 1/ span 3;
+        }
+        &-41{
+            grid-row:72/ span 3;
+            grid-column: 1/ span 3;
         }
         
 
