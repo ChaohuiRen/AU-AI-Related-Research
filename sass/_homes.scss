@@ -1,0 +1,109 @@
+.homes{
+    //background-color: $color-secondary;
+    grid-column: center-start/center-end;
+    margin: 15rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    //7rem gap for the row and column gap
+    grid-gap: 7rem;
+}
+.home{
+    background-color: $color-grey-light-1;
+    //NEW TECH!!!
+    //for most of times(还是有特殊的时候，我们自己看情况，但是大部分时候我们都是只定义那个column), we only define the columns, and then let the css figure out the rows automatically
+    //this is the pattern  remember that!!!!
+
+    //right here, the home is the grid item and also it is a grid container!!!
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    //NEW TECH!!!
+    //for right now, the css didn't allow us define the row gaps individually, if we specify the gap in the grid
+    //it will be the same for all the row gaps or column gap
+    //right here, what we want is,the first row gap should be larger than other row gap, because we have the name element transform to the second row
+    //so what should we do, we can add the top margin to the location and rooms element, and then we can have more space between the first row and the second row
+    //I know it is not ideal, but untill right now, it is the solution only. 
+    grid-row-gap:3.5rem;
+    &__img{
+        width: 100%;
+        //we want the img span all the way from the beginner to the end so that's why we use the 1 and -1
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        z-index: 1;
+
+
+    }
+    &__like{
+        //how could we place the heart icon over the image
+        //I think the best way here is using overlapping,
+        //put the heart on the top of the image
+        //so we put it in the first row and the second column this area, and then we just need to specify those things like below
+        grid-row: 1/2;
+        grid-column: 2/3;
+        //!!!!AND THEN WE WILL FIND THE IMAGE WILL MOVE DOWN, BECAUSE THE CSS NEVER DO THE OVERLAPPING AUTOMATICALLY.
+        //SO what shoudl we do, and then we can also put the image in the same area, and then they will overlap together
+        //yeah!!! reasonable and easy!! and also we can use the z-index to make sure this like icon will 100% on the top of tje image
+        //eventhoug if we don;t use the z-index, the icon is still on the top of the image,
+        //but you know, we just use the z-index to 100% sure the icon will be on the top of the image
+        fill: $color-primary;
+        width: 2.5rem;
+        height: 2.5rem;
+        z-index: 2;
+        justify-self: end;
+        margin: 1rem;
+    }
+    &__name{
+        grid-column: 1/-1;     
+        width: 80%;
+        justify-self:center ;
+        font-family: $font-display;
+        font-size: 1.6rem;
+        font-weight: 400;
+        background-color: $color-secondary;
+        text-align: center;
+        color: white;
+        padding:1.25rem;
+        //NEW TECH!!!
+        //according to the design, we should move up the element a little bit to the image part
+        //there are two options: 1.move it up half height, and then we will make this row be half empty, so it is not good
+        //2.we use overlapping again, put this name element in the same row of the image, and then transform is in the y direction!!
+        //the seconde option is sick!!!!bomb!!amazing
+        //so let's do it!!
+        grid-row: 1/2;
+        z-index: 3;
+        align-self: end;
+        transform: translateY(50%);
+
+    }
+    &__location,
+    &__rooms{
+        margin-top:2.5rem ;
+    }
+
+    //for the location rooms area price they have the similar style
+    //so we put them together
+    &__location,
+    &__rooms,
+    &__area,
+    &__price{
+        font-size: 1.5rem;
+        //NEW TECH
+        //and then we want the svg and the <p> align side by side. so what is the good tool for aligning something side by side????
+        //I think the anwser is flexbox!!!!!
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+
+        //svg inside of above selectors, so we have to put the svg selector inside of those selectorss
+        svg{
+            fill:$color-primary;
+            height: 2rem;
+            width: 2rem;
+            margin-right: 1rem;
+        }
+        
+    }
+    &__btn{
+        grid-column: 1/-1;
+    }
+
+}

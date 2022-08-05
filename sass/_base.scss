@@ -1,0 +1,90 @@
+// COLOR VARIABLES
+$color-primary: black;
+$color-primary-dark: red;
+$color-primary-dark-2:rgb(148, 10, 10);
+
+
+
+$color-secondary:#101d2c;
+
+$color-grey-light-1: #dfdcdb;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// FONT VARIABLES
+$font-primary: 'Roboto', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+
+//RESPONSIVE BREAKPOINTS
+//for the responsive design, like the media query we can;t 
+//use the pixels we should use em instead
+//16pixel is the browser default font size and then use the pixel breakpoint size divide browser default
+//font size and then we can got the em
+//such as our first break point is 1200pixel and then 1200/16=75
+//so it is 75em
+$bp-largest:75em; //breakpoint 1200pixels
+//another break point is 1000pixels
+//because when the screnn size is 100pixel, we can see that
+//the sidebar is a little bit huge at this point, so we chnage this
+//sidebar to the top, so we have to change the grid layout here
+//so what we do here is delete first column and adc a new row how to do it please check line 89
+$bp-large:62.5em;  //1000pixels
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; //the browser default font size is 16px, and then 10px/16px=62.5%  so 1rem=10px
+    //for the media query,we are using desktop first layout, so we will max-width
+    @media only screen and (max-width:$bp-largest) {
+        //we will change the font size when we decrease the screen size, we will
+        //decrease the font size also
+        //we will change the 1rem into 8pixel
+        //NEW TECH!!!
+        //when we use rem, we can automatically change the entire layout by simply change 
+        //the font size
+        font-size:50%;  //50%*16pixels=8pixel  so 1rem=8pixel
+    }
+}
+body{
+    font-family: $font-primary;
+    color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
+.container{
+    display: grid;
+    //NEW TECH!!!!
+    //next is how to use the min-content and so on to define a responsive website and so we can define the responsive website at the very
+    //begining without using any media query
+    //but dont understand the 40vw works??????  FIND THE ANSWER;  GO TO THE Q&A part and then can find the answer for this one!!!!!
+    //when  we use the min-content fot rows: then the row will have the min height to fit content height. when we use the min-content for the column, and then we will have the min width to fit the content's width
+    grid-template-rows: 12vh min-content min-content  min-content; //so the first row has 80% of the viewport, and the second row has the min-content means for the rows, it will has the height will fit it's content, and the third tow has 40% of the view port width
+    //for the fourth and fifth and sixth all of them have the min-content height. so that's why we use the repeat function.
+
+    //next we are gonna define the grid columns we are gonna divide the column into 8 columns.
+    //and we use the static pixel like 14em to define the column with means we want the width of the column to be constant/fixed will not change no matter how we change the view port
+    //1140pixel/8=140pixel=14rem
+    //grid-template-columns: repeat(8,14em);
+    //we have the 8rem for the sidebar and then another 8 columns with same size in the middle of the second column and the last column, and also the second and the last
+    //column they have the same size, each of them have the 1/2 part of the remaining space because of 1 fr
+    //when we increase or decrease the window size, the 1fr and 1fr two columns are the first one to shrink, because each of them occupy the 1fr of the remaining space, so that's why when we
+    //increase and decrease the window, the remaining space will change and then these two columns will change to adapt
+    grid-template-columns:[full-start] minmax( 6rem,1fr) [center-start] repeat(8,[col-start] minmax(min-content,14rem) [col-end]) [center-end] minmax( 6rem,1fr) [full-end];
+    //right here, we are gonna name the column tracks
+    //             name of firt grid line       second grid line:has two names
+    //remember the grid line can have multiple names!!!!   
+    //NEW TECH!!!!! REMEMBER IT!!!!!
+    //for the 1fr, we use the minmax function for it, it means, we can at least minimum have the 6rem as the margin for the central columns,so we always can have the
+    //the margin for the central columnss,  otherwise, it will
+    //has the 1 fraction of the remaining space, so can make sure the center-start and center-end those columns can in the center      
+}

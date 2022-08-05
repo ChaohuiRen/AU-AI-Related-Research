@@ -1,0 +1,9 @@
+.descriptions{
+    grid-column: center-start/ center-end;
+    grid-row:2/3;
+    grid-column: 2/8;
+    display: grid;
+    grid-template-rows: repeat(3,minmax(max-content,1fr));
+    row-gap: 1rem;
+    align-items: center;
+}

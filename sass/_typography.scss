@@ -1,0 +1,70 @@
+%heading{
+    font-family: $font-display;
+    color: $color-primary;
+}
+//NEW TECH
+//!!!!teach you how to extend the style, we can put some style in the heading and then use the 
+//extend property to get something
+//this extend is working in a different way from mixin, mixin is coping all the code, but the extend is copy the selector(eg:heading) and paste
+//in another selector
+.heading-1{
+    //so the heading-1 just copy every style in heading!!!
+  @extend %heading;  
+  font-weight: 700;
+  font-size:3rem;
+  line-height: 1;
+}
+.heading-2{
+    @extend %heading;  
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1;
+}
+%college{
+    font-size: 2rem;
+}
+.college-1 ,.college-3{
+    @extend %college;
+    color: $color-primary;
+}
+.college-2, .college-4{
+    @extend %college;
+    color: $color-primary-dark;
+    font-style: italic;
+}
+.navigation__menu{
+    color:$color-primary;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.engineer__faculty-name{
+    font-weight: 700;
+    color: $color-primary;
+    font-size: 1.6rem;
+}
+.btn{
+    //and then you can have a hand
+    cursor: pointer;
+    transition: all .2s;
+    &:hover{
+        color: green($color: #000000);  //still have a bug, color can't change
+    }   
+}
+.divider{
+    height:1px;
+    grid-column: full-start/full-end;
+    grid-row:2/3;
+    background-color: $color-grey-light-1;
+}
+a {
+    text-decoration: none;
+}
+
+
+//helper class
+//margin-bottom smalll
+.mb-sm{margin-bottom: 2rem;}
+.mb-md{margin-bottom: 3rem;}
+.mb-lg{margin-bottom: 4rem;}
+//huge large
+.mb-hg{margin-bottom: 5rem;}
