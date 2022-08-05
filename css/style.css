@@ -115,7 +115,7 @@ a {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(18, 1fr);
-  grid-template-rows: repeat(4, 5vw) 1.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw repeat(3, 5vw) 1.5vw repeat(4, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw repeat(4, 5vw) 1.5vw repeat(3, 5vw) 1.5vw repeat(4, 5vw) 1.5vw; }
+  grid-template-rows: repeat(4, 5vw) 1.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw repeat(3, 5vw) 1.5vw repeat(4, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw 3.5vw repeat(3, 5vw) 1.5vw repeat(4, 5vw) 1.5vw repeat(3, 5vw) 1.5vw repeat(4, 5vw) 1.5vw repeat(4, 5vw) 1.5vw repeat(4, 5vw) 1.5vw repeat(3, 5vw) 1.5vw repeat(4, 5vw) 1.5vw repeat(3, 5vw) 1.5vw repeat(4, 5vw) 1.5vw repeat(4, 5vw) 1.5vw repeat(3, 5vw) 1.5vw repeat(3, 5vw) 1.5vw repeat(4, 5vw) 1.5vw; }
   .engineer__gallery__item-1 {
     grid-column: 1/4;
     grid-row: 2/5; }
@@ -260,6 +260,90 @@ a {
   .engineer__gallery__item-48 {
     grid-row: 86/ span 3;
     grid-column: 5/span 3; }
+  .engineer__gallery__item-49 {
+    grid-row: 91/ span 3;
+    grid-column: 1/ span 3; }
+  .engineer__gallery__item-50 {
+    grid-row: 96/ span 3;
+    grid-column: 1/ span 3; }
+  .engineer__gallery__item-51 {
+    grid-row: 96/ span 3;
+    grid-column: 5/ span 3; }
+  .engineer__gallery__item-52 {
+    grid-row: 96/ span 3;
+    grid-column: 9/ span 3; }
+  .engineer__gallery__item-53 {
+    grid-row: 96/ span 3;
+    grid-column: 13/ span 3; }
+  .engineer__gallery__item-54 {
+    grid-row: 100/ span 3;
+    grid-column: 1/ span 3; }
+  .engineer__gallery__item-55 {
+    grid-row: 100/ span 3;
+    grid-column: 5/ span 3; }
+  .engineer__gallery__item-56 {
+    grid-row: 105/ span 3;
+    grid-column: 1/ span 3; }
+  .engineer__gallery__item-57 {
+    grid-row: 105/ span 3;
+    grid-column: 5/ span 3; }
+  .engineer__gallery__item-58 {
+    grid-row: 105/ span 3;
+    grid-column: 9/ span 3; }
+  .engineer__gallery__item-59 {
+    grid-row: 105/ span 3;
+    grid-column: 13/ span 3; }
+  .engineer__gallery__item-60 {
+    grid-row: 109/ span 3;
+    grid-column: 1/span 3; }
+  .engineer__gallery__item-61 {
+    grid-row: 109/ span 3;
+    grid-column: 5/span 3; }
+  .engineer__gallery__item-62 {
+    grid-row: 114/ span 3;
+    grid-column: 1/ span 3; }
+  .engineer__gallery__item-63 {
+    grid-row: 114/ span 3;
+    grid-column: 5/ span 3; }
+  .engineer__gallery__item-64 {
+    grid-row: 119/span 3;
+    grid-column: 1/ span 3; }
+  .engineer__gallery__item-65 {
+    grid-row: 119/span 3;
+    grid-column: 5/ span 3; }
+  .engineer__gallery__item-66 {
+    grid-row: 119/span 3;
+    grid-column: 9/ span 3; }
+  .engineer__gallery__item-67 {
+    grid-row: 119/span 3;
+    grid-column: 13/ span 3; }
+  .engineer__gallery__item-68 {
+    grid-row: 123/span 3;
+    grid-column: 1/ span 3; }
+  .engineer__gallery__item-69 {
+    grid-row: 123/span 3;
+    grid-column: 5/ span 3; }
+  .engineer__gallery__item-70 {
+    grid-row: 123/span 3;
+    grid-column: 9/ span 3; }
+  .engineer__gallery__item-71 {
+    grid-row: 123/span 3;
+    grid-column: 13/ span 3; }
+  .engineer__gallery__item-72 {
+    grid-row: 127/span 3;
+    grid-column: 1/ span 3; }
+  .engineer__gallery__item-73 {
+    grid-row: 127/span 3;
+    grid-column: 5/ span 3; }
+  .engineer__gallery__item-74 {
+    grid-row: 132/ span 3;
+    grid-column: 1 / span 3; }
+  .engineer__gallery__item-75 {
+    grid-row: 132/ span 3;
+    grid-column: 5 / span 3; }
+  .engineer__gallery__item-76 {
+    grid-row: 132/ span 3;
+    grid-column: 9 / span 3; }
   .engineer__img {
     width: 100%;
     height: 100%;
