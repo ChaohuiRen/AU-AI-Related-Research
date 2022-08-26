@@ -68,7 +68,7 @@ body{
     //begining without using any media query
     //but dont understand the 40vw works??????  FIND THE ANSWER;  GO TO THE Q&A part and then can find the answer for this one!!!!!
     //when  we use the min-content fot rows: then the row will have the min height to fit content height. when we use the min-content for the column, and then we will have the min width to fit the content's width
-    grid-template-rows: 12vh min-content min-content  min-content; //so the first row has 80% of the viewport, and the second row has the min-content means for the rows, it will has the height will fit it's content, and the third tow has 40% of the view port width
+    grid-template-rows: 12vh min-content min-content min-content min-content min-content min-content min-content  min-content; //so the first row has 80% of the viewport, and the second row has the min-content means for the rows, it will has the height will fit it's content, and the third tow has 40% of the view port width
     //for the fourth and fifth and sixth all of them have the min-content height. so that's why we use the repeat function.
 
     //next we are gonna define the grid columns we are gonna divide the column into 8 columns.

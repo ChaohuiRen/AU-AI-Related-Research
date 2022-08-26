@@ -1,0 +1,12 @@
+.nursing{
+    grid-column:center-start/ center-end;
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(4,5vw) 1.5vw ;
+    &__gallery__item{
+            &-1{
+                grid-column: 1/4;
+                grid-row: 2/5;
+            }
+    }
+}
